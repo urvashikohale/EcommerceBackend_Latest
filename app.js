@@ -40,6 +40,9 @@ app.use("/api", productRoutes);
 app.use("/api", orderRoutes);
 app.use("/api", stripeRoutes);
 
+app.get("/", (req, res) => {
+  res.send("Backend Is LIVE");
+});
 //port
 const port = process.env.PORT || 8000;
 
